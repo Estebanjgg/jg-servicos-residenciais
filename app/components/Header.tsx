@@ -18,6 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu'
 import CloseIcon from '@mui/icons-material/Close'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getAssetPath } from '../utils/assets'
 
 const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -58,7 +59,7 @@ const Header = () => {
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
             <Image
-              src="/img/logo_empresa.png"
+              src={getAssetPath('/img/logo_empresa.png')}
               alt="JG Serviços Residenciais"
               width={50}
               height={50}

@@ -18,6 +18,7 @@ import {
   Instagram,
 } from '@mui/icons-material'
 import Image from 'next/image'
+import { getAssetPath } from '../utils/assets'
 
 const Footer = () => {
   return (
@@ -36,7 +37,7 @@ const Footer = () => {
           <Grid item xs={12} md={4}>
             <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
               <Image
-                src="/img/logo_empresa.png"
+                src={getAssetPath('/img/logo_empresa.png')}
                 alt="JG Serviços Residenciais"
                 width={60}
                 height={60}

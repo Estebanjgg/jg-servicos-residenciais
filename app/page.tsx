@@ -26,6 +26,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm'
 import Link from 'next/link'
+import { getAssetPath } from './utils/assets'
 
 const services = [
   {
@@ -105,7 +106,7 @@ export default function Home() {
             zIndex: -2,
           }}
         >
-          <source src="/Video/Video_inicio.mp4" type="video/mp4" />
+          <source src={getAssetPath('/Video/Video_inicio.mp4')} type="video/mp4" />
         </video>
         
         {/* Overlay */}
