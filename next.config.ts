@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.GITHUB_ACTIONS ? '/jg-servicos-residenciais' : '',
+  // No basePath needed when using custom domain
   trailingSlash: true,
   reactStrictMode: true,
   images: {
