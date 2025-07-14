@@ -13,7 +13,6 @@ import {
   ListItemIcon,
   ListItemText,
   Button,
-  Divider,
   Avatar,
   Chip,
 } from '@mui/material'

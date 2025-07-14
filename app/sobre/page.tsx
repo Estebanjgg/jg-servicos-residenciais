@@ -31,7 +31,6 @@ import {
 } from '@mui/icons-material'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Image from 'next/image'
 
 const companyValues = [
   {
@@ -403,7 +402,7 @@ export default function SobrePage() {
               </Typography>
               <Divider sx={{ backgroundColor: 'rgba(255,255,255,0.3)', my: 3 }} />
               <Typography variant="h6" sx={{ fontWeight: 600 }}>
-                "Sua satisfação é nossa prioridade"
+                &quot;Sua satisfação é nossa prioridade&quot;
               </Typography>
             </Paper>
           </Grid>

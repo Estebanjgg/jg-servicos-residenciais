@@ -8,10 +8,7 @@ import {
   Grid,
   Card,
   CardContent,
-  CardMedia,
   Chip,
-  useTheme,
-  useMediaQuery,
 } from '@mui/material'
 import {
   CleaningServices,
@@ -27,6 +24,7 @@ import {
 } from '@mui/icons-material'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
 import Link from 'next/link'
 
 const services = [
@@ -78,9 +76,6 @@ const benefits = [
 ]
 
 export default function Home() {
-  const theme = useTheme()
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'))
-
   return (
     <>
       <Header />
@@ -329,6 +324,16 @@ export default function Home() {
           </Button>
         </Box>
       </Container>
+
+      {/* Formulário de Contato */}
+      <Box sx={{ backgroundColor: 'grey.50', py: 8 }}>
+        <Container maxWidth="lg">
+          <ContactForm 
+            title="Solicite seu Orçamento Gratuito"
+            subtitle="Preencha o formulário e nossa equipe entrará em contato em até 24 horas"
+          />
+        </Container>
+      </Box>
 
       <Footer />
     </>

@@ -21,6 +21,7 @@ import {
   InputAdornment,
   Fade,
   Zoom,
+  SelectChangeEvent,
 } from '@mui/material'
 import {
   Send,
@@ -67,10 +68,10 @@ export default function ContactForm({
     }))
   }
 
-  const handleSelectChange = (e: React.ChangeEvent<{ value: unknown }>) => {
+  const handleSelectChange = (e: SelectChangeEvent<string>) => {
     setFormData(prev => ({
       ...prev,
-      servico: e.target.value as string
+      servico: e.target.value
     }))
   }
 
@@ -117,7 +118,7 @@ export default function ContactForm({
         setShowSuccess(false)
       }, 5000)
       
-    } catch (error) {
+    } catch {
       // Error logging removed for production build
       setShowError(true)
       
