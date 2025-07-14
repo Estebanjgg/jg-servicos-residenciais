@@ -1,12 +1,14 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
+  basePath: process.env.GITHUB_ACTIONS ? '/jg-servicos-residenciais' : '',
   trailingSlash: true,
-  // No basePath needed when using custom domain
+  reactStrictMode: true,
   images: {
-    unoptimized: true
+    unoptimized: true,
+    domains: ['avatars.githubusercontent.com', 'github.com'],
+    formats: ['image/webp', 'image/avif']
   }
-};
+}
 
-export default nextConfig;
+module.exports = nextConfig
