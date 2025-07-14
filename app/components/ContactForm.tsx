@@ -34,7 +34,7 @@ import {
   Security,
   Speed,
   CheckCircle,
-  Error,
+  Error as ErrorIcon,
 } from '@mui/icons-material'
 
 interface ContactFormProps {
@@ -83,9 +83,19 @@ export default function ContactForm({
 
     try {
       // Configurar EmailJS
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
+      // Validar se as variáveis de ambiente estão configuradas
+      if (!serviceId || !templateId || !publicKey) {
+        console.error('EmailJS configuration missing:', {
+          serviceId: !!serviceId,
+          templateId: !!templateId,
+          publicKey: !!publicKey
+        })
+        throw new Error('EmailJS não está configurado corretamente')
+      }
 
       // Preparar dados para o template
       const templateParams = {
@@ -97,6 +107,8 @@ export default function ContactForm({
         to_name: 'JG Serviços Residenciais',
       }
 
+      console.log('Enviando email com EmailJS...', { serviceId, templateId })
+      
       // Enviar email
       await emailjs.send(serviceId, templateId, templateParams, publicKey)
       
@@ -275,7 +287,7 @@ export default function ContactForm({
             {showError && (
               <Alert 
                 severity="error"
-                icon={<Error />}
+                icon={<ErrorIcon />}
                 sx={{ 
                   mb: 3,
                   borderRadius: 3,
