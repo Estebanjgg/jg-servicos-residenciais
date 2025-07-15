@@ -31,6 +31,7 @@ import {
 } from '@mui/icons-material'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import FloatingWhatsApp from '../components/FloatingWhatsApp'
 
 const companyValues = [
   {
@@ -66,10 +67,10 @@ const companyValues = [
 ]
 
 const achievements = [
-  'Mais de 500 clientes atendidos',
+  'Clientes satisfeitos em nossa região',
   'Equipe especializada e treinada',
   'Produtos e materiais de primeira qualidade',
-  'Atendimento 24/7 para emergências',
+  'Atendimento dedicado para emergências',
   'Garantia em todos os serviços',
   'Orçamentos gratuitos e sem compromisso',
   'Flexibilidade de horários',
@@ -78,29 +79,14 @@ const achievements = [
 
 const timeline = [
   {
-    year: '2020',
-    title: 'Fundação da Empresa',
-    description: 'Início das atividades com foco em serviços residenciais de qualidade'
-  },
-  {
-    year: '2021',
-    title: 'Expansão dos Serviços',
-    description: 'Ampliação do portfólio incluindo jardinagem e serviços elétricos'
-  },
-  {
-    year: '2022',
-    title: 'Crescimento da Equipe',
-    description: 'Contratação de profissionais especializados em cada área'
-  },
-  {
     year: '2023',
-    title: 'Certificações',
-    description: 'Obtenção de certificações e regularização completa'
+    title: 'Fundação da Empresa',
+    description: 'Início das atividades com foco em serviços residenciais de qualidade e atendimento personalizado'
   },
   {
     year: '2024',
-    title: 'Expansão Digital',
-    description: 'Lançamento da plataforma digital e modernização dos processos'
+    title: 'Crescimento e Expansão',
+    description: 'Ampliação do portfólio de serviços e lançamento da plataforma digital para melhor atendimento'
   }
 ]
 
@@ -152,9 +138,9 @@ export default function SobrePage() {
                 Proprietário e Fundador
               </Typography>
               <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
-                Com anos de experiência no mercado de serviços residenciais, José Gregório
-                fundou a JG Serviços com o objetivo de oferecer soluções completas e de
-                qualidade para residências e estabelecimentos comerciais.
+                José Gregório fundou a JG Serviços em 2023 com o objetivo de oferecer 
+                soluções completas e de qualidade para residências e estabelecimentos comerciais,
+                trazendo dedicação e profissionalismo para cada projeto.
               </Typography>
             </Box>
           </Grid>
@@ -184,7 +170,7 @@ export default function SobrePage() {
                   </ListItemIcon>
                   <ListItemText 
                     primary="Fundação" 
-                    secondary="2020"
+                    secondary="2023"
                   />
                 </ListItem>
                 <ListItem>
@@ -410,6 +396,7 @@ export default function SobrePage() {
       </Container>
 
       <Footer />
+      <FloatingWhatsApp />
     </>
   )
 }

@@ -7,7 +7,6 @@ import {
   Grid,
   Card,
   CardContent,
-  Button,
   List,
   ListItem,
   ListItemIcon,
@@ -27,11 +26,11 @@ import {
   Schedule,
   Security,
   ThumbUp,
-  WhatsApp,
 } from '@mui/icons-material'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Link from 'next/link'
+import FloatingWhatsApp from '../components/FloatingWhatsApp'
+
 
 const services = [
   {
@@ -318,45 +317,9 @@ export default function ServicosPage() {
             ))}
           </Grid>
         </Container>
-      </Box>
-
-      {/* Call to Action */}
-      <Container maxWidth="lg" sx={{ py: 8, textAlign: 'center' }}>
-        <Typography variant="h3" sx={{ mb: 2, color: 'primary.main' }}>
-          Precisa de algum desses serviços?
-        </Typography>
-        <Typography variant="h6" sx={{ mb: 4, color: 'text.secondary' }}>
-          Entre em contato conosco e solicite um orçamento gratuito e sem compromisso
-        </Typography>
-        <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Button
-            variant="contained"
-            size="large"
-            startIcon={<WhatsApp />}
-            href="https://wa.me/5511999999999"
-            target="_blank"
-            sx={{
-              backgroundColor: '#25D366',
-              '&:hover': { backgroundColor: '#20B858' },
-              px: 4,
-              py: 1.5,
-            }}
-          >
-            WhatsApp
-          </Button>
-          <Button
-            variant="outlined"
-            size="large"
-            component={Link}
-            href="/contato"
-            sx={{ px: 4, py: 1.5 }}
-          >
-            Formulário de Contato
-          </Button>
-        </Box>
-      </Container>
-
+      </Box>      
       <Footer />
+      <FloatingWhatsApp />
     </>
   )
 }

@@ -33,7 +33,6 @@ const Header = () => {
     { label: 'Início', href: '/' },
     { label: 'Serviços', href: '/servicos' },
     { label: 'Sobre Nós', href: '/sobre' },
-    { label: 'Contato', href: '/contato' },
   ]
 
   const drawer = (
