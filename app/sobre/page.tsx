@@ -188,7 +188,7 @@ export default function SobrePage() {
                   </ListItemIcon>
                   <ListItemText 
                     primary="Área de Atuação" 
-                    secondary="São Paulo e Região Metropolitana"
+                    secondary="Bragança Paulista"
                   />
                 </ListItem>
               </List>

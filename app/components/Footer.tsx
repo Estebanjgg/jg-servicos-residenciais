@@ -155,6 +155,24 @@ const Footer = () => {
           <Typography variant="body2" sx={{ opacity: 0.8 }}>
             © {new Date().getFullYear()} JG Serviços Residenciais. Todos os direitos reservados.
           </Typography>
+          <Typography variant="body2" sx={{ opacity: 0.7, mt: 1 }}>
+            Desenvolvido por{' '}
+            <Link 
+              href="https://portafolio-esteban.lat/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              sx={{ 
+                color: 'white', 
+                textDecoration: 'none',
+                '&:hover': { 
+                  textDecoration: 'underline',
+                  opacity: 1
+                }
+              }}
+            >
+              Esteban González
+            </Link>
+          </Typography>
         </Box>
       </Container>
     </Box>
