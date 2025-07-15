@@ -314,6 +314,59 @@ export default function Home() {
           </Grid>
         </Container>
       </Box>
+
+      {/* Seção Video Promocional */}
+      <Container maxWidth="lg" sx={{ py: 8 }}>
+        <Box sx={{ textAlign: 'center', mb: 6 }}>
+          <Typography variant="h2" sx={{ mb: 2, color: 'primary.main' }}>
+            Conheça Nosso Trabalho
+          </Typography>
+          <Typography variant="h6" sx={{ color: 'text.secondary', maxWidth: 600, mx: 'auto' }}>
+            Assista ao nosso vídeo promocional e veja a qualidade dos nossos serviços
+          </Typography>
+        </Box>
+        
+        <Box 
+          sx={{ 
+            display: 'flex', 
+            justifyContent: 'center',
+            mb: 4
+          }}
+        >
+          <Paper 
+            elevation={8}
+            sx={{
+              borderRadius: 4,
+              overflow: 'hidden',
+              maxWidth: '800px',
+              width: '100%',
+              background: 'linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%)',
+              p: 2
+            }}
+          >
+            <video
+              controls
+              style={{
+                width: '100%',
+                height: 'auto',
+                borderRadius: '12px',
+                boxShadow: '0 4px 20px rgba(0,0,0,0.1)'
+              }}
+              poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%23f0f0f0'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-family='Arial, sans-serif' font-size='24' fill='%23666'%3EJG Serviços Residenciais%3C/text%3E%3C/svg%3E"
+            >
+              <source src={getAssetPath('/Video/JG_Serviços_Video_Creation_Prompt.mp4')} type="video/mp4" />
+              Seu navegador não suporta a reprodução de vídeo.
+            </video>
+            
+            <Box sx={{ mt: 2, textAlign: 'center' }}>
+              <Typography variant="body2" sx={{ color: 'text.secondary', fontStyle: 'italic' }}>
+                🎥 Clique no play para assistir com áudio
+              </Typography>
+            </Box>
+          </Paper>
+        </Box>
+      </Container>
+
       {/* Formulário de Contato */}
       <Box sx={{ backgroundColor: 'grey.50', py: 8 }}>
         <Container maxWidth="lg">
